@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.grid-item {
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.05);
+    filter: brightness(90%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid-item img {
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-item img {
+        border-radius: 3px;
+    }
+}
